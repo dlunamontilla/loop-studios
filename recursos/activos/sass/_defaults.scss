@@ -14,7 +14,9 @@ $min-height: 100vh !default;
 }
 
 :root {
-  font-family: "Alata", sans-serif;
+  // font-family: "Alata", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
 }
 
 html,
@@ -44,15 +46,10 @@ a {
 
 * {
   $box-sizing: border-box;
-
-  -webkit-box-sizing: $box-sizing;
-  -moz-box-sizing: $box-sizing;
   box-sizing: $box-sizing;
 
   &::before,
   &::after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
     box-sizing: inherit;
   }
 }
@@ -60,16 +57,9 @@ a {
 .width {
   width: $width;
 }
-.max {
-  &--width {
-    width: $max-width;
-  }
-}
 
-.min {
-  &--height {
-    min-height: $min-height;
-  }
+.max-width {
+  max-width: $max-width;
 }
 
 // Linea horizontal

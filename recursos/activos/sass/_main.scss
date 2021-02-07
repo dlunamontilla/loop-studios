@@ -1,0 +1,163 @@
+// Fuentes tipográficas:
+.alata {
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+}
+
+.josefin-sans {
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+    background-color: $color-secundario;
+    min-height: 100vh;
+}
+
+nav,
+.secciones {
+    margin: 0 auto;
+    max-width: $max-width;
+}
+
+header,
+footer,
+nav,
+.secciones {
+    position: relative;
+}
+
+footer {
+    min-height: 100px;
+    background-color: $color-base;
+    color: white;
+
+    fill {
+        fill: white;
+    }
+}
+
+.banner {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: silver;
+
+    --object-fit: cover;
+    --object-position: center top;
+
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        -webkit-object-fit: var(--object-fit);
+        -webkit-object-position: var(--object-position);
+
+        object-fit: var(--object-fit);
+        object-position: var(--object-position);
+    }
+
+    z-index: 0;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        background-color: rgba(black, 0.5);
+    }
+}
+
+.header {
+    min-height: 100vh;
+    padding-top: 40px;
+
+    &_nav {
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+
+        // TODO: colores temporales:
+        border: 1px solid;
+    }
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+
+    &__enlace {
+        padding: 0 15px;
+        color: white;
+    }
+
+    &--header {
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+}
+
+// Estilos para las secciones:
+.seccion {
+    &--galeria {
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+}
+
+// Cuadrícula de imágenes:
+.image-grid {
+    --gap: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-gap: var(--gap);
+    gap: var(--gap);
+
+    picture,
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__caption {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: white;
+
+        display: flex;
+        align-items: flex-end;
+        padding: 40px 15%;
+
+        background-image: linear-gradient(to top, rgba(black, 0.7) 0%, transparent);
+    }
+
+    &__title {
+        margin: 0;
+        line-height: 1;
+
+        font: {
+            size: 2rem;
+            weight: inherit;
+        }
+    }
+}

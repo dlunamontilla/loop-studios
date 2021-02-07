@@ -3,7 +3,8 @@
 }
 
 :root {
-  font-family: "Alata", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 15px;
 }
 
 html,
@@ -11,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   color: #606060;
-  background-color: #f1f1fa;
+  background-color: #a6a6a6;
 }
 
 body {
@@ -20,20 +21,16 @@ body {
 
 a {
   text-decoration: none;
-  color: #2d2b74;
+  color: black;
 }
 a:not([class]):hover {
   text-decoration: underline;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *::before, *::after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -41,26 +38,22 @@ a:not([class]):hover {
   width: calc(100% - 20px);
 }
 
-.max--width {
-  width: 1200px;
-}
-
-.min--height {
-  min-height: 100vh;
+.max-width {
+  max-width: 1115px;
 }
 
 hr {
   margin: 20px auto 30px;
   border: 0;
-  border-bottom: 1px solid #716fc9;
+  border-bottom: 1px solid #4d4d4d;
 }
 
 pre,
 code {
   word-wrap: break-word;
   white-space: pre-wrap;
-  background-color: #d0cfed;
-  color: #2d2b74;
+  background-color: #8f8f8f;
+  color: black;
   font-size: 0.9rem;
   line-height: 1.5;
   padding: 10px;
@@ -100,7 +93,7 @@ code {
 .default,
 .predeterminado {
   width: calc(calc(100% - 20px) - 10px);
-  max-width: 1200px;
+  max-width: 1115px;
 }
 .default:not(hr),
 .predeterminado:not(hr) {
@@ -167,10 +160,10 @@ code {
   fill: var(--color);
 }
 .frontal--base, .frontal--base-hover:hover {
-  --color: #2d2b74;
+  --color: black;
 }
 .frontal--secundario, .frontal--secundario-hover:hover {
-  --color: #b22234;
+  --color: white;
 }
 .frontal--whatsapp, .frontal--whatsapp-hover:hover {
   --color: #00e676;
@@ -207,10 +200,10 @@ code {
   fill: var(--color);
 }
 .fondo--base, .fondo--base-hover:hover {
-  --color: #2d2b74;
+  --color: black;
 }
 .fondo--secundario, .fondo--secundario-hover:hover {
-  --color: #b22234;
+  --color: white;
 }
 .fondo--whatsapp, .fondo--whatsapp-hover:hover {
   --color: #00e676;
@@ -238,6 +231,141 @@ code {
 }
 .fondo--blanco, .fondo--blanco-hover:hover {
   --color: white;
+}
+
+.alata {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+.josefin-sans {
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+  background-color: white;
+  min-height: 100vh;
+}
+
+nav,
+.secciones {
+  margin: 0 auto;
+  max-width: 1115px;
+}
+
+header,
+footer,
+nav,
+.secciones {
+  position: relative;
+}
+
+footer {
+  min-height: 100px;
+  background-color: black;
+  color: white;
+}
+footer fill {
+  fill: white;
+}
+
+.banner {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: silver;
+  --object-fit: cover;
+  --object-position: center top;
+  z-index: 0;
+}
+.banner img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -webkit-object-fit: var(--object-fit);
+  -webkit-object-position: var(--object-position);
+  object-fit: var(--object-fit);
+  object-position: var(--object-position);
+}
+.banner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  min-height: 100vh;
+  padding-top: 40px;
+}
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  border: 1px solid;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+.menu__enlace {
+  padding: 0 15px;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .menu--header {
+    display: none;
+  }
+}
+
+.seccion--galeria {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.image-grid {
+  --gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--gap);
+  gap: var(--gap);
+}
+.image-grid picture,
+.image-grid img {
+  width: 100%;
+  display: block;
+}
+.image-grid__item {
+  position: relative;
+}
+.image-grid__caption {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 15%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent);
+}
+.image-grid__title {
+  margin: 0;
+  line-height: 1;
+  font-size: 2rem;
+  font-weight: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */

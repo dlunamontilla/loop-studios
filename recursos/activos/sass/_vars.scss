@@ -1,7 +1,11 @@
-// Esto es opcional, si no se define quederá el color 
+// Esto es opcional, si no se define quederá el color
 // predeterminado en la página:
-$color-base: #2d2b74;
-$color-secundario: #b22234;
+$color-base: hsl(0, 0%, 0%);
+$color-secundario: hsl(0, 0%, 100%);
+$color-gris-oscuro: hsl(0, 0%, 55%);
+$color-gris-muy-oscuro: hsl(0, 0%, 41%);
+
+// Colores:
 
 // Colores de las redes sociales:
 $color-whatsapp: #00e676;
@@ -12,3 +16,7 @@ $color-pinterest: #cb2027;
 $color-linkedin: #0b66c3;
 $color-skype: #00aff0;
 $color-instagram: #c82767;
+
+// Proporciones:
+$width: calc(100% - 20px);
+$max-width: 1115px;
