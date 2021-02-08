@@ -14,10 +14,11 @@ main {
     min-height: 100vh;
 }
 
-nav,
+.header__nav,
 .secciones {
     margin: 0 auto;
     max-width: $max-width;
+    width: $width;
 }
 
 header,
@@ -81,29 +82,52 @@ footer {
     min-height: 100vh;
     padding-top: 40px;
 
-    &_nav {
+    &__nav {
         display: flex;
         justify-content: space-between;
         z-index: 1;
-
-        // TODO: colores temporales:
-        border: 1px solid;
     }
 }
 
 .menu {
+    --padding: 30px;
+    --first-padding: var(--padding);
+    --last-padding: var(--padding);
+    margin-left: 0;
     list-style: none;
     display: flex;
 
+    &__item {
+        margin: 0;
+        padding-left: 0;
+    }
+
     &__enlace {
-        padding: 0 15px;
+        padding: 0 var(--padding);
         color: white;
+
+        &:first-of-type {
+            padding-left: var(--first-padding);
+        }
+
+        &:last-of-type {
+            padding-right: var(--last-padding);
+        }
     }
 
     &--header {
+        --last-padding: 0;
+
         @media screen and (max-width: 600px) {
             display: none;
         }
+    }
+
+    &--footer {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        --first-padding: 0;
     }
 }
 
@@ -113,6 +137,19 @@ footer {
         padding-top: 100px;
         padding-bottom: 200px;
     }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__titulo {
+        font-family: inherit;
+        font-weight: 300;
+        font-size: 3rem;
+        height: 100px;
+    }
 }
 
 // Cuadrícula de imágenes:
@@ -120,7 +157,7 @@ footer {
     --gap: 30px;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
 
     grid-gap: var(--gap);
     gap: var(--gap);
@@ -159,5 +196,84 @@ footer {
             size: 2rem;
             weight: inherit;
         }
+    }
+}
+
+// Pie de página:
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+
+    &__inner {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: $width;
+        max-width: $max-width;
+        min-height: 100px;
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-shrink: 0;
+    }
+
+    &__left {
+        flex-grow: 1;
+    }
+
+    &__right {
+        align-items: flex-end;
+    }
+}
+
+// Redes sociales:
+.social-network {
+    --diametro: 25px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    display: flex;
+
+    &__item {
+        padding: 0;
+        padding: 0;
+    }
+
+    img,
+    svg {
+        width: var(--diametro);
+        height: var(--diametro);
+    }
+
+    &__enlace {
+        padding: 0 7px;
+    }
+}
+
+// Logotipo:
+.logo {
+    color: white;
+    letter-spacing: -2px;
+    font: {
+        size: 2rem;
+        weight: 600;
+    }
+}
+
+// Texto de derechos de autor:
+.autor {
+    color: $color-gris-oscuro;
+    letter-spacing: 1px;
+
+    font: {
+        weight: 400;
+        size: 1rem;
     }
 }

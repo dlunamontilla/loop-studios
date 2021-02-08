@@ -1,0 +1,30 @@
+.button {
+    height: 40px;
+    min-width: 150px;
+    padding: 0 20px;
+    border: 1px solid;
+    outline: medium none;
+    background-image: none;
+
+    &--enlace {
+        text-decoration: none;
+        letter-spacing: 3px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: 300ms ease;
+
+        &:hover {
+            background-color: rgba(black, 0.05);
+        }
+
+        &:focus {
+            border-color: $color-gris-muy-oscuro;
+        }
+
+        &:active {
+            transition: none;
+            background-color: transparent;
+        }
+    }
+}
