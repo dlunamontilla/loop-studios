@@ -34,9 +34,15 @@
   <main id="app">
     <header class="header">
       <nav class="header__nav alata">
-        <div class="logo">loopstudios</div>
+        <div class="logo">
+          <a class="logo__enlace" href="#">
+            <img src="images/logo.svg" alt="Logotipo">
+          </a>
+        </div>
 
-        <button id="menu-button">Menú</button>
+        <a id="menu-button" href="#menu-modal" class="button button--menu">
+          <img src="images/icon-hamburger.svg" alt="Menú">
+        </a>
 
         <ul class="menu menu--header" id="menu-header">
           <li class="menu__item"><a href="#" class="menu__enlace">About</a></li>
@@ -47,17 +53,24 @@
         </ul>
       </nav>
 
-      <div class="texto">
-        IMMERSIVE EXPERIENCES THAT DELIVER
+      <div class="header__texto">
+        <h1 class="header__titulo josefin-sans">
+          IMMERSIVE EXPERIENCES THAT DELIVER
+        </h1>
       </div>
 
-      <div class="banner">
-        <img src="images/desktop/image-hero.jpg" alt="Hero">
+      <div class=" banner">
+
+        <picture>
+          <source type="image/jpeg" srcset="images/desktop/image-hero.jpg" media="(min-width: 376px)">
+          <source type="image/jpeg" srcset="images/mobile/image-hero.jpg" media="(max-width: 375px)">
+          <img src="images/desktop/image-hero.jpg" alt="Hero">
+        </picture>
       </div>
     </header>
 
     <div class="secciones">
-      <section class="seccion">
+      <section class="seccion seccion--the-leader">
         <div class="seccion__image">
           <picture>
             <source srcset="images/desktop/image-interactive.jpg" type="image/jpeg">
@@ -65,12 +78,14 @@
           </picture>
         </div>
 
-        <div class="seccion__caption">
-          <h2>THE LEADER IN INTERACTIVE VR</h2>
+        <div class="seccion__caption josefin-sans">
+          <h2 class="seccion__titulo seccion__titulo--leader">THE LEADER IN INTERACTIVE VR</h2>
 
-          <p>Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best
-            companies around the globe. Our award-winning creations have transformed businesses through digital
-            experiences that bind to their brand.</p>
+          <div class="alata">
+            <p>Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best
+              companies around the globe. Our award-winning creations have transformed businesses through digital
+              experiences that bind to their brand.</p>
+          </div>
         </div>
       </section>
 
@@ -78,122 +93,128 @@
         <header class="seccion__header josefin-sans">
           <h2 class="seccion__titulo">OUR CREATIONS</h2>
 
-          <a href="#" class="button button--enlace alata">SEE ALL</a>
+          <a href="#" class="button button--enlace button--top alata">SEE ALL</a>
         </header>
 
         <!-- Cuadrícula de imágenes -->
         <div class="image-grid josefin-sans">
           <div class="image-grid__item">
             <picture class="image-grid__picture">
-              <source srcset="images/desktop/image-deep-earth.jpg" type="image/jpeg">
-              <source srcset="images/mobile/image-deep-earth.jpg" type="image/jpeg" media="(max-width: 500px)">
+              <source srcset="images/desktop/image-deep-earth.jpg" type="image/jpeg" media="(min-width: 582px)">
+              <source srcset="images/mobile/image-deep-earth.jpg" type="image/jpeg" media="(max-width: 581px)">
               <img src="images/desktop/image-deep-earth.jpg" alt="Deep Earth">
             </picture>
 
-            <div class="image-grid__caption">
+            <a href="#" class="image-grid__caption">
               <h3 class="image-grid__title">
                 DEEP EARTH
               </h3>
-            </div>
+            </a>
           </div>
 
           <div class="image-grid__item">
             <picture class="image-grid__picture">
-              <source srcset="images/desktop/image-night-arcade.jpg" type="image/jpeg">
-              <source srcset="images/mobile/image-night-arcade.jpg" type="image/jpeg" media="(max-width: 500px)">
+              <source srcset="images/desktop/image-night-arcade.jpg" media="(min-width: 582px)">
+              <source srcset="images/mobile/image-night-arcade.jpg" media="(max-width: 651px)">
+
               <img src="images/desktop/image-night-arcade.jpg" alt="Night Arcade">
             </picture>
 
-            <div class="image-grid__caption">
+            <a href="#" class="image-grid__caption">
               <h3 class="image-grid__title">
                 NIGHT ARCADE
               </h3>
-            </div>
+            </a>
           </div>
 
           <div class="image-grid__item">
             <picture class="image-grid__picture">
-              <source srcset="images/desktop/image-soccer-team.jpg" type="image/jpeg">
-              <source srcset="images/mobile/image-soccer-team.jpg" type="image/jpeg" media="(max-width: 500px)">
+              <source srcset="images/desktop/image-soccer-team.jpg" type="image/jpeg" media="(min-width: 582px)">
+              <source srcset="images/mobile/image-soccer-team.jpg" type="image/jpeg" media="(max-width: 581px)">
               <img src="images/desktop/image-soccer-team.jpg" alt="Soccer Team VR">
             </picture>
 
-            <div class="image-grid__caption">
+            <a href="#" class="image-grid__caption">
               <h3 class="image-grid__title">
                 SOCCER TEAM VR
               </h3>
-            </div>
+            </a>
           </div>
 
           <div class="image-grid__item">
             <picture class="image-grid__picture">
-              <source srcset="images/desktop/image-grid.jpg" type="image/jpeg">
-              <source srcset="images/mobile/image-grid.jpg" type="image/jpeg" media="(max-width: 500px)">
+              <source srcset="images/desktop/image-grid.jpg" type="image/jpeg" media="(min-width: 582px)">
+              <source srcset="images/mobile/image-grid.jpg" type="image/jpeg" media="(max-width: 581px)">
               <img src="images/desktop/image-grid.jpg" alt="The Grid">
             </picture>
 
-            <div class="image-grid__caption">
+            <a href="#" class="image-grid__caption">
               <h3 class="image-grid__title">
                 THE GRID
               </h3>
-            </div>
+            </a>
           </div>
 
           <div class="image-grid__item">
             <picture class="image-grid__picture">
-              <source srcset="images/desktop/image-from-above.jpg" type="image/jpeg">
-              <source srcset="images/mobile/image-from-above.jpg" type="image/jpeg" media="(max-width: 500px)">
+              <source srcset="images/desktop/image-from-above.jpg" type="image/jpeg" media="(min-width: 582px)">
+              <source srcset="images/mobile/image-from-above.jpg" type="image/jpeg" media="(max-width: 581px)">
               <img src="images/desktop/image-from-above.jpg" alt="From Up Above VR">
             </picture>
 
-            <div class="image-grid__caption">
+            <a href="#" class="image-grid__caption">
               <h3 class="image-grid__title">
                 FROM UP ABOVE VR
               </h3>
-            </div>
+            </a>
           </div>
 
           <div class="image-grid__item">
             <picture class="image-grid__picture">
-              <source srcset="images/desktop/image-pocket-borealis.jpg" type="image/jpeg">
-              <source srcset="images/mobile/image-pocket-borealis.jpg" type="image/jpeg" media="(max-width: 500px)">
+              <source srcset="images/desktop/image-pocket-borealis.jpg" type="image/jpeg" media="(min-width: 582px)">
+              <source srcset="images/mobile/image-pocket-borealis.jpg" type="image/jpeg" media="(max-width: 581px)">
               <img src="images/desktop/image-pocket-borealis.jpg" alt="Pocket Borealis">
             </picture>
 
-            <div class="image-grid__caption">
+            <a href="#" class="image-grid__caption">
               <h3 class="image-grid__title">
                 POCKET BOREALIS
               </h3>
-            </div>
+            </a>
           </div>
 
           <div class="image-grid__item">
             <picture class="image-grid__picture">
-              <source srcset="images/desktop/image-curiosity.jpg" type="image/jpeg">
-              <source srcset="images/mobile/image-curiosity.jpg" type="image/jpeg" media="(max-width: 500px)">
+              <source srcset="images/desktop/image-curiosity.jpg" type="image/jpeg" media="(min-width: 582px)">
+              <source srcset="images/mobile/image-curiosity.jpg" type="image/jpeg" media="(max-width: 581px)">
               <img src="images/desktop/image-curiosity.jpg" alt="The Curiosity">
             </picture>
 
-            <div class="image-grid__caption">
+            <a href="#" class="image-grid__caption">
               <h3 class="image-grid__title">
                 THE CURIOSITY
               </h3>
-            </div>
+            </a>
           </div>
 
           <div class="image-grid__item">
             <picture class="image-grid__picture">
-              <source srcset="images/desktop/image-fisheye.jpg" type="image/jpeg">
-              <source srcset="images/mobile/image-fisheye.jpg" type="image/jpeg" media="(max-width: 500px)">
+              <source srcset="images/desktop/image-fisheye.jpg" type="image/jpeg" media="(min-width: 582px)">
+              <source srcset="images/mobile/image-fisheye.jpg" type="image/jpeg" media="(max-width: 581px)">
               <img src="images/desktop/image-fisheye.jpg" alt="Make it Fisheye">
             </picture>
 
-            <div class="image-grid__caption">
+            <a href="#" class="image-grid__caption">
               <h3 class="image-grid__title">
                 MAKE IT FISHEYE
               </h3>
-            </div>
+            </a>
           </div>
+        </div>
+
+        <!-- Pie de la sección -->
+        <div class="seccion__footer">
+          <a href="#" class="button button--enlace alata">SEE ALL</a>
         </div>
       </section>
 
@@ -202,7 +223,11 @@
     <footer class="footer alata">
       <div class="footer__inner">
         <div class="footer__left">
-          <div class="logo">loopstudios</div>
+          <div class="logo logo--footer">
+            <a class="logo__enlace" href="#">
+              <img src="images/logo.svg" alt="Logotipo">
+            </a>
+          </div>
 
           <nav class="footer__nav">
             <ul class="menu menu--footer" id="menu-footer">
@@ -217,14 +242,14 @@
 
         <div class="footer__right">
           <nav class="footer__nav">
-            <ul class="social-network">
-              <li class="social-network__item"><a class="social-network__enlace" href="#"><img
+            <ul class="menu menu--media">
+              <li class="menu__item"><a class="menu__enlace menu__enlace--media" href="#"><img
                     src="images/icon-facebook.svg" alt="Facebook"></a></li>
-              <li class="social-network__item"><a class="social-network__enlace" href="#"><img
+              <li class="menu__item"><a class="menu__enlace menu__enlace--media" href="#"><img
                     src="images/icon-twitter.svg" alt="Twitter"></a></li>
-              <li class="social-network__item"><a class="social-network__enlace" href="#"><img
+              <li class="menu__item"><a class="menu__enlace menu__enlace--media" href="#"><img
                     src="images/icon-pinterest.svg" alt="Pinterest"></a></li>
-              <li class="social-network__item"><a class="social-network__enlace" href="#"><img
+              <li class="menu__item"><a class="menu__enlace menu__enlace--media" href="#"><img
                     src="images/icon-instagram.svg" alt="Instagram"></a></li>
             </ul>
           </nav>
@@ -234,7 +259,42 @@
           </div>
         </div>
       </div>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/dlunamontilla/" target="_blank">David E Luna M</a>.
+      </div>
     </footer>
+
+    <!-- Menú como ventana modal -->
+    <div class="menu-modal" id="menu-modal">
+      <header>
+        <nav class="menu-modal__nav logo">
+          <a href="#" class="logo__enlace logo__enlace--small">
+            <picture>
+              <source type="image/xml+svg" srcset="images/logo.svg">
+              <img src="images/logo.svg" alt="Logo">
+            </picture>
+          </a>
+
+          <a href="#" class="menu-modal__salir" id="menu-salir">
+            <img src="images/icon-close.svg" alt="Close">
+          </a>
+        </nav>
+      </header>
+
+      <section class="menu-modal__section">
+        <nav class="menu-modal__nav menu-modal__nav--content">
+          <ul class="menu menu--modal josefin-sans" id="menu-footer">
+            <li class="menu__item"><a href="#" class="menu__enlace menu__enlace--modal">About</a></li>
+            <li class="menu__item"><a href="#" class="menu__enlace menu__enlace--modal">Careers</a></li>
+            <li class="menu__item"><a href="#" class="menu__enlace menu__enlace--modal">Events</a></li>
+            <li class="menu__item"><a href="#" class="menu__enlace menu__enlace--modal">Products</a></li>
+            <li class="menu__item"><a href="#" class="menu__enlace menu__enlace--modal">Support</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
   </main>
 </body>
 

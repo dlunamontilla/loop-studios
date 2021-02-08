@@ -1,10 +1,11 @@
 .button {
     height: 40px;
-    min-width: 150px;
-    padding: 0 20px;
-    border: 1px solid;
     outline: medium none;
     background-image: none;
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    transition: 300ms ease;
 
     &--enlace {
         text-decoration: none;
@@ -13,9 +14,13 @@
         align-items: center;
         justify-content: center;
         transition: 300ms ease;
+        min-width: 150px;
+        padding: 0 20px;
+        border: 1px solid;
 
         &:hover {
-            background-color: rgba(black, 0.05);
+            background-color: rgba(black, 1);
+            color: white;
         }
 
         &:focus {
@@ -24,7 +29,48 @@
 
         &:active {
             transition: none;
-            background-color: transparent;
+            background-color: rgba(black, 0.8);
+        }
+    }
+
+    &--top {
+        @media screen and (max-width: 580px) {
+            display: none;
+        }
+    }
+
+    &--menu {
+        --display: none;
+        --transform: scale(0.5);
+        --opacity: 0;
+        --diametro: 30px;
+
+        display: var(--display);
+        border-radius: 5px;
+        align-items: center;
+        transform: var(--transform);
+        opacity: var(--opacity);
+
+        width: var(--diametro);
+        height: var(--diametro);
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:active {
+            transition: none;
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 850px) {
+            --display: flex;
+            --transform: scale(1);
+            --opacity: 1;
         }
     }
 }
